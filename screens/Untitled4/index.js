@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const SubscriptionPlanScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>Choose a Subscription Plan</Text>
@@ -13,7 +16,9 @@ const SubscriptionPlanScreen = () => {
           <Text style={styles.planPrice}>$9.99/month</Text>
           <Text style={styles.planDescription}>Access to basic features</Text>
           <TouchableOpacity style={styles.planButton}>
-            <Text style={styles.planButtonText}>Choose Plan</Text>
+            <Pressable onPress={() => {
+            navigation.navigate("Untitled5");
+          }}><Text style={styles.planButtonText}>Choose Plan</Text></Pressable>
           </TouchableOpacity>
         </View>
         <View style={styles.plan}>
@@ -22,7 +27,9 @@ const SubscriptionPlanScreen = () => {
           <Text style={styles.planPrice}>$19.99/month</Text>
           <Text style={styles.planDescription}>Access to premium features</Text>
           <TouchableOpacity style={styles.planButton}>
-            <Text style={styles.planButtonText}>Choose Plan</Text>
+            <Pressable onPress={() => {
+            navigation.navigate("Untitled5");
+          }}><Text style={styles.planButtonText}>Choose Plan</Text></Pressable>
           </TouchableOpacity>
         </View>
         <View style={styles.plan}>
@@ -31,7 +38,9 @@ const SubscriptionPlanScreen = () => {
           <Text style={styles.planPrice}>$29.99/month</Text>
           <Text style={styles.planDescription}>Access to all features</Text>
           <TouchableOpacity style={styles.planButton}>
-            <Text style={styles.planButtonText}>Choose Plan</Text>
+            <Pressable onPress={() => {
+            navigation.navigate("Untitled5");
+          }}><Text style={styles.planButtonText}>Choose Plan</Text></Pressable>
           </TouchableOpacity>
         </View>
       </View>
