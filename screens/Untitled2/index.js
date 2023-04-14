@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 const SignInScreen = () => {
+  const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,7 +23,9 @@ const SignInScreen = () => {
         <Text style={styles.forgotPassword}>Forgot Password?</Text>
       </TouchableOpacity>
       <TouchableOpacity>
-        <Text style={styles.signUp}>Don't have an account? Sign Up</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled3");
+      }}><Text style={styles.signUp}>Don't have an account? Sign Up</Text></Pressable>
       </TouchableOpacity>
     </View>;
 };
